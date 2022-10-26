@@ -4,7 +4,17 @@
   }
 }
 
-@mixin width($width) {
+@function width_name($name) {
+  @if $name == null {
+    @return '';
+  } @else {
+    @return '#{$name}-';
+  }
+}
+
+@mixin width($name) {
+  $width: width_name($name);
+
   $double_margin: $cell-margin * 2;
 
   $cell_widths: (
@@ -22,27 +32,27 @@
     'one' 1
   );
 
-  .#{$width}-hide {
+  .#{$width}hide {
     display: none !important;
   }
 
-  .#{$width}-text-left {
+  .#{$width}text-left {
     text-align:left;
   }
 
-  .#{$width}-text-right {
+  .#{$width}text-right {
     text-align:right;
   }
 
-  .#{$width}-text-center {
+  .#{$width}text-center {
     text-align:center;
   }
   
-  .#{$width}-text-justify {
+  .#{$width}text-justify {
     text-align:justify;
   }
 
-  .#{$width}-fifth {
+  .#{$width}fifth {
     max-width: calc( 20% - #{$double_margin} );
     flex: 0 0 calc( 20% - #{$double_margin} );
     
@@ -52,13 +62,13 @@
     }
   }
 
-  .#{$width}-fit {
+  .#{$width}fit {
     flex: 0 0 auto;
     width: auto;
     max-width: auto;
   }
 
-  .#{$width}-fill {
+  .#{$width}fill {
     flex: 1 1 0;
     width: auto;
     max-width: auto;
@@ -66,7 +76,7 @@
 
   @each $name, $size in $cell_widths {
 
-    .#{$width}-#{$name} {
+    .#{$width}#{$name} {
       max-width: calc( 100%/12 * #{$size} - #{$double_margin} );
       flex: 0 0 calc( 100%/12 * #{$size} - #{$double_margin} );
 
@@ -76,7 +86,7 @@
       }
     }
 
-    .#{$width}-order-#{$size} {
+    .#{$width}order-#{$size} {
       order: #{$size};
     }
   }
@@ -115,4 +125,20 @@
 @mixin flex_center {
   display: flex;
   align-items: center
+}
+
+@mixin cell_space($size) {
+  margin: {
+    right: $size;
+    left: $size;
+  }
+
+  padding: {
+    right: $size;
+    left: $size;
+  }
+}
+
+@mixin collapsed {
+  @include cell_space(0);
 }

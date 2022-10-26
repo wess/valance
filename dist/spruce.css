@@ -1014,9 +1014,11 @@ h6 {
   backface-visibility: hidden;
   flex-flow: row wrap;
 }
-.grid.collapse-padding > .cell {
-  padding-left: 0;
+.grid.collapse > .cell {
+  margin-right: 0;
+  margin-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 .grid.edge {
   margin-left: -1rem;
@@ -1093,10 +1095,10 @@ h6 {
   max-width: 100%;
   min-width: 0;
   min-height: 0;
-  margin-left: 0.5rem;
   margin-right: 0.5rem;
-  padding-left: 0.5rem;
+  margin-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 .cell.fit {
   flex: 0 0 auto;
@@ -1107,206 +1109,206 @@ h6 {
   width: auto;
 }
 .cell.collapse {
-  margin-left: 0;
   margin-right: 0;
-  padding-left: 0;
+  margin-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
-.-hide {
+.hide {
   display: none !important;
 }
 
-.-text-left {
+.text-left {
   text-align: left;
 }
 
-.-text-right {
+.text-right {
   text-align: right;
 }
 
-.-text-center {
+.text-center {
   text-align: center;
 }
 
-.-text-justify {
+.text-justify {
   text-align: justify;
 }
 
-.-fifth {
+.fifth {
   max-width: calc( 20% - 1rem );
   flex: 0 0 calc( 20% - 1rem );
 }
-.-fifth.collapse {
+.fifth.collapse {
   max-width: 20%;
   flex: 0 0 20%;
 }
 
-.-fit {
+.fit {
   flex: 0 0 auto;
   width: auto;
   max-width: auto;
 }
 
-.-fill {
+.fill {
   flex: 1 1 0;
   width: auto;
   max-width: auto;
 }
 
-.-twelve {
+.twelve {
   max-width: calc( 100%/12 * 12 - 1rem );
   flex: 0 0 calc( 100%/12 * 12 - 1rem );
 }
-.-twelve.collapse {
+.twelve.collapse {
   max-width: calc( 100%/12 * 12 );
   flex: 0 0 calc( 100%/12 * 12 );
 }
 
-.-order-12 {
+.order-12 {
   order: 12;
 }
 
-.-eleven {
+.eleven {
   max-width: calc( 100%/12 * 11 - 1rem );
   flex: 0 0 calc( 100%/12 * 11 - 1rem );
 }
-.-eleven.collapse {
+.eleven.collapse {
   max-width: calc( 100%/12 * 11 );
   flex: 0 0 calc( 100%/12 * 11 );
 }
 
-.-order-11 {
+.order-11 {
   order: 11;
 }
 
-.-ten {
+.ten {
   max-width: calc( 100%/12 * 10 - 1rem );
   flex: 0 0 calc( 100%/12 * 10 - 1rem );
 }
-.-ten.collapse {
+.ten.collapse {
   max-width: calc( 100%/12 * 10 );
   flex: 0 0 calc( 100%/12 * 10 );
 }
 
-.-order-10 {
+.order-10 {
   order: 10;
 }
 
-.-nine {
+.nine {
   max-width: calc( 100%/12 * 9 - 1rem );
   flex: 0 0 calc( 100%/12 * 9 - 1rem );
 }
-.-nine.collapse {
+.nine.collapse {
   max-width: calc( 100%/12 * 9 );
   flex: 0 0 calc( 100%/12 * 9 );
 }
 
-.-order-9 {
+.order-9 {
   order: 9;
 }
 
-.-eight {
+.eight {
   max-width: calc( 100%/12 * 8 - 1rem );
   flex: 0 0 calc( 100%/12 * 8 - 1rem );
 }
-.-eight.collapse {
+.eight.collapse {
   max-width: calc( 100%/12 * 8 );
   flex: 0 0 calc( 100%/12 * 8 );
 }
 
-.-order-8 {
+.order-8 {
   order: 8;
 }
 
-.-seven {
+.seven {
   max-width: calc( 100%/12 * 7 - 1rem );
   flex: 0 0 calc( 100%/12 * 7 - 1rem );
 }
-.-seven.collapse {
+.seven.collapse {
   max-width: calc( 100%/12 * 7 );
   flex: 0 0 calc( 100%/12 * 7 );
 }
 
-.-order-7 {
+.order-7 {
   order: 7;
 }
 
-.-six {
+.six {
   max-width: calc( 100%/12 * 6 - 1rem );
   flex: 0 0 calc( 100%/12 * 6 - 1rem );
 }
-.-six.collapse {
+.six.collapse {
   max-width: calc( 100%/12 * 6 );
   flex: 0 0 calc( 100%/12 * 6 );
 }
 
-.-order-6 {
+.order-6 {
   order: 6;
 }
 
-.-five {
+.five {
   max-width: calc( 100%/12 * 5 - 1rem );
   flex: 0 0 calc( 100%/12 * 5 - 1rem );
 }
-.-five.collapse {
+.five.collapse {
   max-width: calc( 100%/12 * 5 );
   flex: 0 0 calc( 100%/12 * 5 );
 }
 
-.-order-5 {
+.order-5 {
   order: 5;
 }
 
-.-four {
+.four {
   max-width: calc( 100%/12 * 4 - 1rem );
   flex: 0 0 calc( 100%/12 * 4 - 1rem );
 }
-.-four.collapse {
+.four.collapse {
   max-width: calc( 100%/12 * 4 );
   flex: 0 0 calc( 100%/12 * 4 );
 }
 
-.-order-4 {
+.order-4 {
   order: 4;
 }
 
-.-three {
+.three {
   max-width: calc( 100%/12 * 3 - 1rem );
   flex: 0 0 calc( 100%/12 * 3 - 1rem );
 }
-.-three.collapse {
+.three.collapse {
   max-width: calc( 100%/12 * 3 );
   flex: 0 0 calc( 100%/12 * 3 );
 }
 
-.-order-3 {
+.order-3 {
   order: 3;
 }
 
-.-two {
+.two {
   max-width: calc( 100%/12 * 2 - 1rem );
   flex: 0 0 calc( 100%/12 * 2 - 1rem );
 }
-.-two.collapse {
+.two.collapse {
   max-width: calc( 100%/12 * 2 );
   flex: 0 0 calc( 100%/12 * 2 );
 }
 
-.-order-2 {
+.order-2 {
   order: 2;
 }
 
-.-one {
+.one {
   max-width: calc( 100%/12 * 1 - 1rem );
   flex: 0 0 calc( 100%/12 * 1 - 1rem );
 }
-.-one.collapse {
+.one.collapse {
   max-width: calc( 100%/12 * 1 );
   flex: 0 0 calc( 100%/12 * 1 );
 }
 
-.-order-1 {
+.order-1 {
   order: 1;
 }
 

@@ -5,10 +5,9 @@
   backface-visibility: hidden;
   flex-flow: row wrap;
 
-  &.collapse-padding {
+  &.collapse {
     > .cell {
-      padding-left: 0;
-      padding-right: 0;
+      @include collapsed;
     }
   }
 
@@ -77,10 +76,8 @@ $align: (
   max-width:100%;
   min-width:0;
   min-height:0;
-  margin-left:$cell-margin;
-  margin-right:$cell-margin;
-  padding-left:$cell-padding;
-  padding-right:$cell-padding;
+
+  @include cell_space($cell-margin);
 
   &.fit {
     flex: 0 0 auto;
@@ -93,11 +90,7 @@ $align: (
   }
 
   &.collapse {
-    margin-left:0;
-    margin-right:0;
-    padding-left:0;
-    padding-right:0;
-
+    @include collapsed;
   }
 }
 
