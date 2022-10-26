@@ -1,0 +1,153 @@
+::selection {
+  background-color: $green;
+  color: #fff;
+}
+
+:focus {
+  outline: 0;
+}
+
+p {
+  margin-bottom: 1.1rem;
+  text-rendering: optimizeLegibility
+}
+
+em, 
+i, 
+.em {
+  font-style: italic;
+  line-height: inherit
+}
+
+$cases: (
+  'uppercase': uppercase,
+  'lowercase': lowercase,
+  'capitalize': capitalize
+);
+
+@each $case, $value in $cases {
+  .#{$case} {
+    text-transform: $value;
+  }
+}
+
+
+strong, 
+b, 
+.strong {
+  font-weight: bolder;
+  line-height: inherit;
+}
+
+small, 
+.small {
+  font-size:80%;
+}
+
+.large {
+  font-size:140%;
+}
+
+@mixin supsub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+
+sup, 
+.sup {
+  @include supsub;
+  top: -.5em;
+}
+
+sub, 
+.sub {
+  @include supsub;
+  bottom: -.25em;
+}
+
+.ellipsis, 
+.ellipsis 
+li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-clip, 
+.text-clip li {
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family:$header-font;
+  font-weight:normal;
+  text-rendering:optimizeLegibility;
+  font-size:inherit;
+  color:$header-color;
+  margin-bottom: $line-height + rem;
+}
+
+@mixin header($s, $l) {
+  font-size: $s + rem;
+  line-height: $l;
+}
+
+$headings: (
+  'h1.headline' 4 1.2,
+  'h1' 2.827 1.4,
+  'h2' 1.999 1.55,
+  'h3' 1.414 1.7,
+  'h4' 1 1.85,
+  'h5' .707 2,
+  'h6' .707 2
+);
+
+@each $heading, $size, $line in $headings {
+  #{$heading} {
+    @include header($size, $line);
+  }
+}
+
+
+@media #{$medium} {
+  $md_headers: (
+    'h1.headline' 5.653 1.18
+    'h1' 3.998 1.22,
+    'h2' 2.827 1.4,
+    'h3' 1.999 1.55,
+    'h4' 1.414 1.7,
+    'h5' 1 1.85
+  );
+
+  @each $heading, $size, $line in $md_headers {
+    #{$heading} {
+      @include header($size, $line);
+    }
+  }
+}
+
+.sub-header {
+  color:$subfont-color;
+}
+
+$vw_headers: (
+  '.headline' 7,
+  'h1' 6,
+  'h2' 5,
+  'h3' 4.5,
+  'h4' 4,
+  'h5' 3.5,
+  'h6' 3 
+);
+
+@each $heading, $size in $vw_headers {
+  #{$heading} {
+    font-size: $size + vw;
+  }
+}

@@ -1,0 +1,105 @@
+.grid {
+	position: relative;
+  display: flex;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  flex-flow: row wrap;
+
+  &.collapse-padding {
+    > .cell {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &.edge {
+    margin-left: -($cell-margin + $cell-padding);
+    margin-right: -($cell-margin + $cell-padding);
+  }
+  &.half-edge {
+    margin-left: -$cell-margin;
+    margin-right: -$cell-margin;
+  }
+}
+.nowrap {
+  flex-wrap:nowrap;
+}
+
+.wrap-reverse {
+  flex-wrap:wrap-reverse
+}
+
+$justified: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  space-between: space-between,
+  space-around: space-around
+);
+
+@each $key, $value in $justified {
+  .justify-#{$key} {
+    justify-content: $value;
+  }
+}
+
+$align: (
+  top: flex-start,
+  bottom: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline
+);
+
+@each $key, $value in $align {
+  .align-#{$key} {
+    align-items: $value;
+  }
+}
+
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.vertical {
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  &.reverse {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
+}
+
+.cell {
+  flex:1 1 auto;
+  max-width:100%;
+  min-width:0;
+  min-height:0;
+  margin-left:$cell-margin;
+  margin-right:$cell-margin;
+  padding-left:$cell-padding;
+  padding-right:$cell-padding;
+
+  &.fit {
+    flex: 0 0 auto;
+    width: auto
+  }
+
+  &.fill {
+    flex: 1 1;
+    width: auto;
+  }
+
+  &.collapse {
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+
+  }
+}
+
+@include width(null);
+

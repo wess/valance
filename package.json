@@ -1,0 +1,31 @@
+{
+  "name": "spruce",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Wess Cope <opensource@wess.io>",
+  "main": "src/spruce.scss",
+  "keywords": [
+    "css",
+    "css3",
+    "flexbox",
+    "front-end",
+    "framework",
+    "html",
+    "html5",
+    "mobile-first",
+    "responsive",
+    "sanitize",
+    "scss",
+    "web"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:uncompressed": "sass src/spruce.scss dist/spruce.css",
+    "build:compressed": "sass src/spruce.scss dist/spruce.min.css --style compressed",
+    "build": "yarn clean && yarn build:uncompressed && yarn build:compressed"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "sass": "^1.55.0"
+  }
+}

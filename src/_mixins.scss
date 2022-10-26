@@ -1,0 +1,118 @@
+@mixin down_size($width) {
+  .#{$width}-show {
+    display: none !important;
+  }
+}
+
+@mixin width($width) {
+  $double_margin: $cell-margin * 2;
+
+  $cell_widths: (
+    'twelve' 12,
+    'eleven' 11,
+    'ten' 10,
+    'nine' 9,
+    'eight' 8,
+    'seven' 7,
+    'six' 6,
+    'five' 5,
+    'four' 4,
+    'three' 3,
+    'two' 2,
+    'one' 1
+  );
+
+  .#{$width}-hide {
+    display: none !important;
+  }
+
+  .#{$width}-text-left {
+    text-align:left;
+  }
+
+  .#{$width}-text-right {
+    text-align:right;
+  }
+
+  .#{$width}-text-center {
+    text-align:center;
+  }
+  
+  .#{$width}-text-justify {
+    text-align:justify;
+  }
+
+  .#{$width}-fifth {
+    max-width: calc( 20% - #{$double_margin} );
+    flex: 0 0 calc( 20% - #{$double_margin} );
+    
+    &.collapse {
+      max-width: 20%;
+      flex: 0 0 20%
+    }
+  }
+
+  .#{$width}-fit {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: auto;
+  }
+
+  .#{$width}-fill {
+    flex: 1 1 0;
+    width: auto;
+    max-width: auto;
+  }
+
+  @each $name, $size in $cell_widths {
+
+    .#{$width}-#{$name} {
+      max-width: calc( 100%/12 * #{$size} - #{$double_margin} );
+      flex: 0 0 calc( 100%/12 * #{$size} - #{$double_margin} );
+
+      &.collapse {
+        max-width: calc( 100%/12 * #{$size} );
+        flex: 0 0 calc( 100%/12 * #{$size} )
+      }
+    }
+
+    .#{$width}-order-#{$size} {
+      order: #{$size};
+    }
+  }
+}
+
+@mixin scrollbar($track, $bar, $width, $radius) {
+  &::-webkit-scrollbar {
+    background: $track; 
+    width:$width;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $bar; 
+    border-radius:$radius;
+  }
+  
+  &::-webkit-scrollbar-corner {
+    background: $track;
+  }
+
+  scrollbar-base-color: $bar;
+  scrollbar-3dlight-color: $bar;
+  scrollbar-highlight-color: $bar;
+  scrollbar-track-color: $track;
+  scrollbar-arrow-color: $track;
+  scrollbar-shadow-color: $bar;
+  scrollbar-dark-shadow-color: $bar;
+}
+
+@mixin columns($count, $gap) {
+  column-count:$count;
+  column-gap:$gap;
+  break-inside:avoid
+}
+
+@mixin flex_center {
+  display: flex;
+  align-items: center
+}

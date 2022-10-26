@@ -1,0 +1,51 @@
+// Colors
+$blue: #2266a7 !default;
+$violet: #540D6E !default; 
+$yellow: #FFE066 !default;
+$orange: #EA9643 !default;
+$red: #f15a3b !default;
+$green: #57a290 !default;
+
+$gray:#6e7e85 !default;
+$black:#181818 !default;
+
+// Typography
+$body-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
+$header-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif !default;
+
+$line-height:1.5;
+
+$header-color:$black !default;
+$font-color:#3d3d3d !default;
+$subfont-color: rgba($font-color,.6) !default;
+
+$link-color:$blue !default;
+$link-hover:$red !default;
+
+// Transition Speeds
+$transition-fast: all 0.18s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$transition-moderate: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$transition-normal: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$transition-slow: all 0.75s cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+
+// Shadows
+$shadow-base: 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.14) !default;
+$shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.25), 0 4px 20px rgba(0, 0, 0, 0.18) !default;
+$shadow-selected: 0 12px 16px rgba(0, 0, 0, 0.25), 0 18px 40px rgba(0, 0, 0, 0.19) !default;
+$shadow-solid: 3px 3px 0px rgba(0,0,0,0.2) !default;
+
+// Metrics
+$site-width:960px !default;
+$site-width-sm:760px !default;
+$site-width-lg:1024px !default;
+$site-width-xl:1280px !default;
+
+$cell-margin:.5rem !default;
+$cell-padding:.5rem !default;
+
+// Media Break Adjustments
+$break-sm:  480px !default;
+$break-md: 768px !default;
+$break-lg:  1024px !default;
+$break-xl: 1280px !default;

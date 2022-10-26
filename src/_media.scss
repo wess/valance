@@ -1,0 +1,49 @@
+$small:  'only screen and (min-width: #{$break-sm})';
+$medium: 'only screen and (min-width: #{$break-md})';
+$large:  'only screen and (min-width: #{$break-lg})';
+$xlarge: 'only screen and (min-width: #{$break-xl})';
+
+$small-down:  'only screen and (max-width: #{$break-sm - 1px})';
+$medium-down: 'only screen and (max-width: #{$break-md - 1px})';
+$large-down:  'only screen and (max-width: #{$break-lg - 1px})';
+$xlarge-down: 'only screen and (max-width: #{$break-xl - 1px})';
+
+@media #{$small-down} {
+  @include down_size('small');
+}
+@media #{$small} {
+  @include width('small');
+}
+
+@media #{$medium-down} {
+  @include down_size('medium');
+}
+@media #{$medium} {
+  @include width('medium');
+}
+
+@media #{$large-down} {
+  @include down_size('large');
+}
+@media #{$large} {
+  @include width('large')
+}
+
+@media #{$xlarge-down} {
+  @include down_size('xlarge');
+}
+@media #{$xlarge} {
+  @include width('xlarge')
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important
+  }
+}
