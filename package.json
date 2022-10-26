@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": "Wess Cope <opensource@wess.io>",
-  "main": "src/spruce.scss",
+  "main": "scss/valance.scss",
   "repository": "https://github.com/wess/spruce.git",
   "keywords": [
     "css",
@@ -20,9 +20,9 @@
     "web"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build:uncompressed": "sass src/spruce.scss dist/spruce.css",
-    "build:compressed": "sass src/spruce.scss dist/spruce.min.css --style compressed",
+    "clean": "rimraf css",
+    "build:uncompressed": "sass scss/valance.scss css/valance.css",
+    "build:compressed": "sass scss/valance.scss css/valance.min.css --style compressed",
     "build": "yarn clean && yarn build:uncompressed && yarn build:compressed"
   },
   "devDependencies": {
