@@ -1,9 +1,10 @@
 {
-  "name": "spruce.css",
+  "name": "valance",
   "version": "0.0.1",
   "license": "MIT",
   "author": "Wess Cope <opensource@wess.io>",
   "main": "src/spruce.scss",
+  "repository": "https://github.com/wess/spruce.git",
   "keywords": [
     "css",
     "css3",
